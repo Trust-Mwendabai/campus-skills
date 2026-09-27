@@ -1,0 +1,47 @@
+CAMPUS SKILLX - DEMO LOGIN DETAILS
+==================================
+For local development only. Delete this file before deploying anywhere public.
+
+App URL:   http://localhost/Campus_Skill/
+Log in at: http://localhost/Campus_Skill/login.php
+           (use the email address or the student ID as the username)
+
+STUDENTS  (password: Demo1234)
+------------------------------------------------------------------------------
+Name              Email                            Student ID   Programme
+Trust Mwendabai   trust.mwendabai@demo.skillx      DEMO-1001    Information Security
+John Banda        john.banda@demo.skillx           DEMO-1002    Computer Science
+Mary Phiri        mary.phiri@demo.skillx           DEMO-1003    Graphic Design
+Peter Zulu        peter.zulu@demo.skillx           DEMO-1004    Business Administration
+Amara Okafor      amara.okafor@demo.skillx         DEMO-1005    Data Science
+Brian Tembo       brian.tembo@demo.skillx          DEMO-1006    Software Engineering
+Chanda Mulenga    chanda.mulenga@demo.skillx       DEMO-1007    Music
+Esther Moyo       esther.moyo@demo.skillx          DEMO-1008    Statistics
+
+ADMINISTRATORS  (password: Admin1234)
+------------------------------------------------------------------------------
+Role          Email                  Student ID    Can do
+Admin         admin@demo.skillx      DEMO-ADMIN    Manage students, skills, categories, reports,
+                                                    reviews, messages, announcements
+Super admin   super@demo.skillx      DEMO-SUPER    Everything above, plus Admin Accounts and
+                                                    system settings
+
+ACCOUNTS FOR TESTING RESTRICTIONS  (password: Demo1234)
+------------------------------------------------------------------------------
+Grace Lungu     grace.lungu@demo.skillx      DEMO-2001   Pending: cannot log in until an admin activates her
+Kelvin Sakala   kelvin.sakala@demo.skillx    DEMO-2002   Suspended: cannot log in
+
+SAMPLE DATA
+------------------------------------------------------------------------------
+- Trust and Mary have an active match (Graphic design <-> Python) with a session and chat.
+- Brian and John completed an exchange and reviewed each other.
+- Amara has a pending request to Trust (Ethical hacking) - log in as Trust to accept or reject it.
+- There is one open report against Kelvin and one announcement - log in as an admin to see them.
+
+RESET THE DEMO DATA
+------------------------------------------------------------------------------
+From C:\xampp\htdocs\Campus_Skill, empty the users table and re-run the seed:
+
+  php database/seed-demo.php --yes
+
+(The seed stops with "Demo data already exists" if demo users are still in the database.)
